@@ -10,31 +10,37 @@ public class SnakeandLadder {
 
 		    public static void main(String[] args) {
 
-		    	System.out.println("Welcome to Snake and ladder game");
-		        while(currentposition<100) {
-		            int dice = (int) (Math.random() * 10) % 6 + 1;
-		            int option = (int) (Math.random() * 10) % 3;
+		    	 System.out.println("Welcome to Snake and ladder game");
+		         while(currentposition<100) {
+		             int dice = (int) (Math.random() * 10) % 6 + 1;
+		             int option = (int) (Math.random() * 10) % 3;
 
-		            if (option == IF_LADDER) {
-		                System.out.println("ladder!!");
-		                currentposition +=dice;
+		             if (option == IF_LADDER) {
+		                 System.out.println("ladder!!");
+		                 currentposition +=dice;
 
-		            } else if (option == IF_SNAKE) {
-		                System.out.println("snake!!");
-		                currentposition -=dice;
-
-
-		            } else {
-		                System.out.println("N0 play");
-		               
-		            }
-		            if(currentposition<START_POSITION){
-		                currentposition=START_POSITION;
-		            }
-		            
-		            System.out.println("currentposition: "+currentposition);
-		        }
+		             } else if (option == IF_SNAKE) {
+		                 System.out.println("snake!!");
+		                 currentposition -=dice;
 
 
-		    }
-		 }
+		             } else {
+		                 System.out.println("N0 play");
+		             }
+		             if(currentposition>START_POSITION){
+		                 currentposition-=START_POSITION;
+
+		             }if(currentposition>100){
+		                 currentposition=100;
+		             }
+
+		             System.out.println("currentposition: "+currentposition);
+		         }
+
+
+		     }
+		  }
+
+
+		    
+	
